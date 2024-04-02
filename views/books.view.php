@@ -20,9 +20,12 @@
                 <td><?= $book["published"]?></td>
                 <td><?= $book["available"]?></td>
                 <td class="delete-row">
-                    <form method="POST" action="book-delete.php">
-                        <button>Delete</button>
+                    <form method="POST" action="/delete">
+                        <button name="id" value="<?= $book["id"] ?>">Delete</button>
                     </form>
+                </td>
+                <td class="delete-row">
+                    <a href="/edit/<?php $book["id"] ?>" class="edit-button">Edit</a>
                 </td>
             </tr>
             <?php } ?>

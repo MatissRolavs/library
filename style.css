@@ -4,6 +4,7 @@
 }
 a {
   color: yellow;
+  text-decoration: none;
 }
 table,
 th,
@@ -23,6 +24,25 @@ button {
   display: inline-block;
   font-size: 10px;
 }
+
+button:hover {
+  background-color: lightyellow;
+}
 .delete-row {
   border: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.edit-button {
+  background-color: yellow;
+  color: black;
+  font-size: 10px;
+  padding: 7px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+.edit-button:hover {
+  background-color: lightyellow;
 }
