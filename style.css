@@ -1,21 +1,22 @@
 :root {
   background-color: black;
-  color: yellow;
+  color: #ffa31a;
 }
 a {
-  color: yellow;
+  color: black;
   text-decoration: none;
+  margin: 10px;
 }
 table,
 th,
 td {
-  border: 1px solid yellow;
+  border: 1px solid #ffa31a;
   border-collapse: collapse;
   text-align: center;
   padding: 5px;
 }
 button {
-  background-color: yellow;
+  background-color: #ffa31a;
   border: 2px solid;
   color: black;
   padding: 7px 16px;
@@ -26,7 +27,7 @@ button {
 }
 
 button:hover {
-  background-color: lightyellow;
+  background-color: #808080;
 }
 .delete-row {
   border: none;
@@ -34,9 +35,13 @@ button:hover {
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: #ffa31a;
+  height: 50px;
+  align-items: center;
+  font-size: 20px;
 }
 .edit-button {
-  background-color: yellow;
+  background-color: #ffa31a;
   color: black;
   font-size: 10px;
   padding: 7px 16px;
@@ -44,5 +49,22 @@ nav {
   display: inline-block;
 }
 .edit-button:hover {
-  background-color: lightyellow;
+  background-color: #808080;
+}
+.book {
+  font-size: 50px;
+  color: white;
+}
+.hub {
+  font-size: 50px;
+  background-color: #ffa31a;
+  color: black;
+  border-radius: 5px;
+}
+.bookhub-box {
+  display: flex;
+  justify-content: center;
+}
+.welcome {
+  font-size: 20px;
 }
