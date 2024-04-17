@@ -8,5 +8,7 @@ return [
   "/delete" => "controllers/book-delete.php",
   "/edit" => "controllers/book-edit.php",
   "/logout" => "controllers/logout.php",
-  "/borrow" => "controllers/book-borrow.php"
+  "/borrow" => "controllers/book-borrow.php",
+  "/borrowed-books" => "controllers/borrowed-books.php",
+  "/return" => "controllers/return-books.php"
 ]; 

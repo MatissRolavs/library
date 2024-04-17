@@ -4,7 +4,9 @@
 <?php
     require "views/components/navbar.php";
 ?>
-<h1>Edit <?= $book["title"]?></h1>
+<div class="page-title">
+    <h1>Edit <?= $book["title"]?></h1>
+</div>
 
 <form method="POST"> 
     <label>

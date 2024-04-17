@@ -4,7 +4,9 @@
 <?php
     require "components/navbar.php";
 ?>
-<p>Add more books</p>
+<div class="page-title">
+    <h1>Add more books</h1>
+</div>
 <form method="POST">
     <label>
         Title:
