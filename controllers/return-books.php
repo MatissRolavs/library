@@ -1,5 +1,5 @@
 <?php
-require "functions.php";
+auth();
 require "Db.php";
 $config = require("config.php");
 

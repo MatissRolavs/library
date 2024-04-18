@@ -1,4 +1,5 @@
 <?php
+guest();
 require "Db.php";
 $config = require("config.php");
 $db = new Db($config);

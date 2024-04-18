@@ -1,9 +1,7 @@
 <?php
-require "functions.php";
+auth();
 require "Db.php";
-if($_SESSION["user"] == false){
-    header("Location: /login");
-}
+
 $config = require("config.php");
 
 $query = "SELECT * FROM books";

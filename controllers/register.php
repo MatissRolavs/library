@@ -1,4 +1,5 @@
 <?php
+guest();
 require "Db.php";
 require "Validator.php";
 $config = require("config.php");

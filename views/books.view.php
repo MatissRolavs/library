@@ -7,6 +7,9 @@
 <?php if($_SESSION["user"] == true ){ ?>
 <p class="welcome">Welcome, <?= $_SESSION["username"] ?>!</p>
 <?php } ?>
+<form action="/logout" method="POST">
+    <button>Logout</button>
+</form>
 <div class="page-title">
     <h1>Book List</h1>
 </div>

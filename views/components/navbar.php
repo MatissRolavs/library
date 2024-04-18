@@ -10,9 +10,6 @@
     <?php if($_SESSION["user"] == true) { ?>
         <a href="borrowed-books">Borrowed Books</a>
     <?php } ?>
-    <?php if($_SESSION["user"] == true) { ?>
-        <a href="logout">Logout</a>
-    <?php } ?>
     </nav>
 </header>
 
