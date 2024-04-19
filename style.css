@@ -147,3 +147,30 @@ body {
   width: 100vw;
   max-width: 100%;
 }
+.edit-input {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin-left: 5%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  border: 2px solid #ffa31a;
+}
+.book-edit-button {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin-left: 5%;
+  font-size: 20px;
+}
+.edit-box {
+  display: flex;
+  align-items: center;
+  justify-content: wrap;
+  width: 25vw;
+  height: 50vh;
+  border: 2px solid #ffa31a;
+  flex-direction: column;
+  border-radius: 25px;
+}
