@@ -1,5 +1,5 @@
 <?php
-auth();
+admin();
 require "Db.php";
 $config = require("config.php");
 $db = new Db($config);

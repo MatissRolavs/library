@@ -9,16 +9,12 @@ CREATE TABLE books (
 	available INT
 );
 
-SELECT * FROM books;
-
 CREATE TABLE users (
 	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	username VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
-	books VARCHAR(255)
-)
-
-SELECT * FROM users;
+	admin INT NOT NULL
+);
 
 CREATE TABLE borrowed_books (
 	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
@@ -30,3 +26,6 @@ CREATE TABLE borrowed_books (
 	FOREIGN KEY (user_id) REFERENCES users(id),
 	FOREIGN KEY (book_id) REFERENCES books(id)
 )
+
+UPDATE users SET admin = 1 WHERE id = 1;
+

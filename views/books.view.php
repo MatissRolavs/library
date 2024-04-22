@@ -5,7 +5,7 @@
     require "components/navbar.php";
 ?>
 <?php if($_SESSION["user"] == true ){ ?>
-<p class="welcome">Welcome, <?= $_SESSION["username"] ?>!</p>
+<p class="welcome">Welcome, <?= $_SESSION["username"] ?> !</p>
 <?php } ?>
 <form action="/logout" method="POST">
     <button>Logout</button>
@@ -32,7 +32,7 @@
                     </form>
                 
                 <?php } ?>
-                <?php if($_SESSION["user"] == true && $_SESSION["username"] == "matiss"){ ?>
+                <?php if($_SESSION["user"] == true && $_SESSION["admin"] == 1){ ?>
                 
                     <form method="POST" action="/delete">
                         <button name="id" value="<?= $book["id"] ?>">Delete</button>

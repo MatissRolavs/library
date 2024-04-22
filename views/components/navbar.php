@@ -4,7 +4,7 @@
     </div>
     <nav>
         <a href="/">Book List</a>
-        <?php if($_SESSION["user"] == true && $_SESSION["username"] == "matiss"){ ?>
+        <?php if($_SESSION["user"] == true && $_SESSION["admin"] == 1){ ?>
         <a href="create-book">Add More Books</a>
         <?php } ?>
     <?php if($_SESSION["user"] == true) { ?>
@@ -12,8 +12,3 @@
     <?php } ?>
     </nav>
 </header>
-
-<!-- <?php if($_SESSION["user"] == false) { ?>
-        <a href="/login">Login</a>
-        <a href="register">Register</a>
-    <?php } ?> -->

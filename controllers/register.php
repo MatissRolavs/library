@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     if(empty($errors)){
     $params = [];
-    $query = "INSERT INTO users (username, password) VALUES (:username, :password);";
+    $query = "INSERT INTO users (username, password, admin) VALUES (:username, :password, 0);";
     $params = [":username" => $_POST["username"],
                 ":password" => password_hash($_POST["password"], PASSWORD_BCRYPT)];
     $db->execute($query,$params);

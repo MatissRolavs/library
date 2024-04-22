@@ -19,4 +19,11 @@ function guest(){
         die();
     }
 }
+
+function admin(){
+    if($_SESSION["admin"]!==1){
+        header("Location: /");
+        die();
+    }
+}
 ?>

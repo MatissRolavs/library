@@ -174,3 +174,96 @@ body {
   flex-direction: column;
   border-radius: 25px;
 }
+
+@media (max-width: 1024px) {
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #ffa31a;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    margin: 70px;
+    width: 50vw;
+    height: 80vh;
+    background-image: url("books.png");
+    color: black;
+    padding: 10px;
+  }
+  .card-text {
+    width: 50vw;
+    text-align: center;
+  }
+  .login-input {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-left: 5%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    border: 2px solid #ffa31a;
+  }
+  .login-button {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-left: 5%;
+    font-size: 20px;
+  }
+  .login-box {
+    display: flex;
+    align-items: center;
+    justify-content: wrap;
+    width: 50vw;
+    height: 60vh;
+    border: 2px solid #ffa31a;
+    flex-direction: column;
+    border-radius: 25px;
+  }
+  .edit-input {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-left: 5%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    border: 2px solid #ffa31a;
+  }
+  .book-edit-button {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-left: 5%;
+    font-size: 20px;
+  }
+  .edit-box {
+    display: flex;
+    align-items: center;
+    justify-content: wrap;
+    width: 50vw;
+    height: 60vh;
+    border: 2px solid #ffa31a;
+    flex-direction: column;
+    border-radius: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .book {
+    font-size: 100%;
+  }
+  .hub {
+    font-size: 100%;
+  }
+  .login-box {
+    display: flex;
+    align-items: center;
+    justify-content: wrap;
+    width: 50vw;
+    height: 35vh;
+    border: 2px solid #ffa31a;
+    flex-direction: column;
+    border-radius: 25px;
+  }
+}

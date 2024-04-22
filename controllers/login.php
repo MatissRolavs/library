@@ -11,12 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $errors = [];
     $result = $db->execute($query,$params)->fetch();
     if(!$result || !password_verify($_POST["password"], $result["password"])){
-        $errors["user"] = "Incorrect password or email";
+        $errors["user"] = "Incorrect password or username";
     }
     if(empty($errors)){
         $_SESSION["user"] = true;
         $_SESSION["userID"] = $result["id"];
         $_SESSION["username"] = $_POST["username"];
+        $_SESSION["admin"] = $result["admin"];
         header("Location: /");
         die();
     }
