@@ -186,7 +186,7 @@ body {
     margin: 70px;
     width: 50vw;
     height: 80vh;
-    background-image: url("books.png");
+    background-image: url("/images/books.png");
     color: black;
     padding: 10px;
   }
