@@ -1,6 +1,7 @@
 <?php
 admin();
 require "Db.php";
+require "Validator.php";
 $config = require("config.php");
 $db = new Db($config);
 
@@ -11,13 +12,20 @@ $book = $db->execute($query,$params)->fetch();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $errors = [];
+  if(!Validator::string($_POST["title"],min:1)){
+    $errors["title"] = "Title cannot be empty";
+  }
+  if(!Validator::string($_POST["author"],min:1)){
+      $errors["author"] = "Author cannot be empty";
+  }
+  if(!Validator::string($_POST["title"],min:1)){
+      $errors["title"] = "Title cannot be empty";
+  }
+  if(!Validator::number($_POST["available"],min:1)){
+      $errors["available"] = "Available must be a number";
+  }
+  $formattedDate = date("Y-m-d", strtotime($_POST["published"]));
 
-//   if (!Validator::string($_POST["name"], min: 2, max: 50)) {
-//     $errors["title"] = "Name cannot be less than 2 or more than 50 chars";
-//   }
-//   if (!Validator::int($_POST["calories"], min: 0)) {
-//     $errors["calories"] = "Calories count invalid";
-//   }
 if (empty($errors)) {
     $query = "UPDATE books
               SET title = :title, author = :author, published = :published, available = :available
@@ -25,7 +33,7 @@ if (empty($errors)) {
     $params = [
         ":title" => $_POST["title"],
         ":author" => $_POST["author"],
-        ":published" => $_POST["published"],
+        ":published" => $formattedDate,
         ":available" => $_POST["available"],
         ":id" => $_POST["id"],
     ];

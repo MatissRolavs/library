@@ -12,19 +12,19 @@
         <form method="POST">
             <label>
                 Title:
-                <input  class="edit-input" name="title"/>
+                <input value="<?= $_POST["title"] ?? "" ?>" class="edit-input" name="title" placeholder="<?php if (isset($errors["title"])){?><?= $errors["title"] ?> <?php } else { ?>  <?php } ?>"/>
             </label>
             <label>
                 Author:
-                <input class="edit-input" name="author"/>
+                <input class="edit-input" name="author" value="<?= $_POST["author"] ?? "" ?>" placeholder="<?php if (isset($errors["author"])){?><?= $errors["author"] ?> <?php } else { ?>  <?php } ?>"/>
             </label>
             <label>
                 Published date:
-                <input class="edit-input"name="published"/>
+                <input type="date"class="edit-input"name="published" value="<?= $_POST["published"] ?? "" ?>"/>
             </label>
             <label>
                 Available:
-                <input class="edit-input"name="available"/>
+                <input class="edit-input"name="available" placeholder="<?php if (isset($errors["available"])){?><?= $errors["available"] ?> <?php } else { ?>  <?php } ?>"/>
             </label>
             <button class="book-edit-button">Save</button>
         </form>
