@@ -15,7 +15,9 @@
                 <h2>Title:<?= $book["name"]?></h2>
             </div>
             <div class="card-text">
-                <p>Author:<?= $book["author"]?></p>
+                <?php foreach($authors as $author){?>
+                <?php if ($book["author_id"] == $author["id"]){ ?><p>Author: <?= $author["name"]; } ?> </p>
+                <?php } ?>
             </div>
             <p>Published:<?= $book["published"]?></p>
             <form method="POST" action="/return">

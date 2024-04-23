@@ -3,7 +3,7 @@
 ?>
 <?php
     require "components/navbar.php";
-?>
+?>  
 <article>
     <div class="edit-box">
         <div class="bookhub-box">
@@ -16,7 +16,11 @@
             </label>
             <label>
                 Author:
-                <input class="edit-input" name="author" value="<?= $_POST["author"] ?? "" ?>" placeholder="<?php if (isset($errors["author"])){?><?= $errors["author"] ?> <?php } else { ?>  <?php } ?>"/>
+            <select name="author">
+                <?php foreach($authors as $author) {?>
+                    <option value="<?= $author["id"] ?>"><?= $author["name"] ?></option>
+                <?php } ?>
+            </select>
             </label>
             <label>
                 Published date:

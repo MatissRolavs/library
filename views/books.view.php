@@ -10,6 +10,18 @@
 <form action="/logout" method="POST">
     <button>Logout</button>
 </form>
+<div class="sort-div">
+    <label>Sort by author:
+        <form method="POST" action="/sort" style="display:inline-block">
+            <select name="author" class="sort-select">
+            <?php foreach($authors as $author) {?>
+                <option value="<?= $author["id"] ?>"><?= $author["name"] ?></option>
+            <?php } ?>
+            </select>
+            <button class="sort-button">Sort</button>
+        </form>
+    </label>
+</div>
 <div class="page-title">
     <h1>Book List</h1>
 </div>
@@ -21,7 +33,9 @@
                 <h2>Title: <?= $book["title"]?></h2>
             </div>
             <div class="card-text">
-                <p>Author: <?= $book["author"]?></p>
+                <?php foreach($authors as $author){?>
+                    <?php if ($book["author_id"] == $author["id"]){ ?><p>Author: <?= $author["name"]; } ?> </p>
+                <?php } ?>
             </div>
                 <p>Published: <?= $book["published"]?></p>
                 <p>Available: <?= $book["available"]?></p>

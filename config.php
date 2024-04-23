@@ -3,7 +3,7 @@ return [
     "host" => "localhost",
     "dbname" => "library",
     "user" => "root",
-    "password" => "root",
+    "password" => "",
     "charset" => "utf8mb4"
 ];
 ?>

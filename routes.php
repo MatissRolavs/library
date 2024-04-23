@@ -10,5 +10,7 @@ return [
   "/logout" => "controllers/logout.php",
   "/borrow" => "controllers/book-borrow.php",
   "/borrowed-books" => "controllers/borrowed-books.php",
-  "/return" => "controllers/return-books.php"
+  "/return" => "controllers/return-books.php",
+  "/author-create" => "controllers/book-author-create.php",
+  "/sort" => "controllers/book-sort.php"
 ]; 
