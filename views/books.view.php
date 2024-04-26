@@ -4,15 +4,18 @@
 <?php
     require "components/navbar.php";
 ?>
-<?php if($_SESSION["user"] == true ){ ?>
-<p class="welcome">Welcome, <?= $_SESSION["username"] ?> !</p>
-<?php } ?>
-<form action="/logout" method="POST">
-    <button>Logout</button>
-</form>
-<div class="sort-div">
-    <label>Sort by author:
-        <form method="POST" action="/sort" style="display:inline-block">
+<div class="user-box">
+    <div class="logout-div">
+        <?php if($_SESSION["user"] == true ){ ?>
+        <p class="welcome"><?= $_SESSION["username"] ?></p>
+        <?php } ?>
+        <form action="/logout" method="POST">
+            <button class="logout-button">Logout</button>
+        </form>
+    </div>
+    <div class="sort-div">
+        <p class="sort-text">Sort by author:</p>
+        <form method="POST" action="/sort" class="sort-form">
             <select name="author" class="sort-select">
             <?php foreach($authors as $author) {?>
                 <option value="<?= $author["id"] ?>"><?= $author["name"] ?></option>
@@ -20,8 +23,9 @@
             </select>
             <button class="sort-button">Sort</button>
         </form>
-    </label>
+    </div>
 </div>
+
 <div class="page-title">
     <h1>Book List</h1>
 </div>

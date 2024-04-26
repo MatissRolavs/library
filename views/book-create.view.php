@@ -16,7 +16,7 @@
             </label>
             <label>
                 Author:
-            <select name="author">
+            <select class="author-select" name="author">
                 <?php foreach($authors as $author) {?>
                     <option value="<?= $author["id"] ?>"><?= $author["name"] ?></option>
                 <?php } ?>
