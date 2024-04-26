@@ -5,9 +5,13 @@ require "Validator.php";
 $config = require("config.php");
 $db = new Db($config);
 
+
+
+$query = "SELECT * FROM authors";
+$authors = $db->execute($query,[])->fetchAll();
+
 $query = "SELECT * FROM books WHERE id = :id";
 $params = [":id" => $_GET["id"]];
-
 $book = $db->execute($query,$params)->fetch();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,11 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 if (empty($errors)) {
     $query = "UPDATE books
-              SET title = :title, author = :author, published = :published, available = :available
+              SET title = :title, author_id = :author_id, published = :published, available = :available
               WHERE id = :id";
     $params = [
         ":title" => $_POST["title"],
-        ":author" => $_POST["author"],
+        ":author_id" => $_POST["author"],
         ":published" => $formattedDate,
         ":available" => $_POST["available"],
         ":id" => $_POST["id"],

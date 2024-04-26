@@ -14,10 +14,13 @@
                 Title:
                 <input class="edit-input" name="title" value="<?= $_POST["title"] ?? $book['title'] ?>" placeholder="<?php if (isset($errors["title"])){?><?= $errors["title"] ?> <?php } else { ?>  <?php } ?>"/>
             </label>
+            Author:
+            <select class="author-select" name="author">
+                <?php foreach($authors as $author) {?>
+                    <option value="<?= $author["id"] ?>"><?= $author["name"] ?></option>
+                <?php } ?>
+            </select>
             <label>
-                Author:
-                <input class="edit-input" name="author" value="<?= $_POST["author"] ?? $book["author"] ?>" placeholder="<?php if (isset($errors["author"])){?><?= $errors["author"] ?> <?php } else { ?>  <?php } ?>"/>
-            </label>
             <label>
                 Published:
                 <input type="date" class="edit-input" name="published" value="<?= $_POST["published"] ?? $book["published"] ?>"/>
